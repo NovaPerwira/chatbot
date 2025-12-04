@@ -24,4 +24,16 @@ use App\Http\Controllers\ChatController;
 Route::get('/c', function () {
     return view('chat');
 });
+use App\Http\Controllers\GeminiAgentController;
+
+// Jalur 1: Untuk Chat Biasa / Lama
+// Route::post('/chat', [ChatController::class, 'sendMessage']);
+
+Route::get('/playground', function () {
+    return view('chat_playground');
+});
+// Jalur 2: Untuk Chat dengan AI (Ganti URL-nya, misal jadi /chat-ai)
+// Route::post('/chat-ai', [GeminiAgentController::class, 'chat']);
+
 Route::post('/chat', [ChatController::class, 'sendMessage']);
+Route::post('/chat-ai', [GeminiAgentController::class, 'chat']);

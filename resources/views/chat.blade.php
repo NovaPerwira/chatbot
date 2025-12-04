@@ -6,7 +6,7 @@
     <title>Chatbot AI (Gemini)</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.tsx'])
 </head>
 <body class="bg-slate-900 h-screen flex items-center justify-center font-sans antialiased">
 
